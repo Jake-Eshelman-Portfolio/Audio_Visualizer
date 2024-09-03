@@ -56,7 +56,7 @@ void setup() {
   sgtl5000_1.enable();
   sgtl5000_1.volume(0.5);
   sgtl5000_1.inputSelect(AUDIO_INPUT_MIC);
-  sgtl5000_1.micGain(50);
+  sgtl5000_1.micGain(36);
 
   delay(1000);
 }
@@ -69,7 +69,7 @@ void loop() {
     tft.fillScreen(ILI9341_BLACK); // Clear screen for new frame
 
     for (int i = 0; i < 128; i++) {  // FFT bins range from 0-511, use a subset
-      float magnitude = fft1024_1.read(i) * 650.0;  // Scale magnitude
+      float magnitude = fft1024_1.read(i) * 500.0;  // Scale magnitude
       magnitude = 0.7 * previousMagnitude[i] + 0.3 * magnitude;  //  smoothing
       previousMagnitude[i] = magnitude;
       int height = map(magnitude, 0, 100, 0, tft.height());
@@ -81,7 +81,7 @@ void loop() {
       tft.fillRect(i * 3, tft.height() - height, 2, height, color);
     }
     // Add a short delay to reduce flickering and improve performance
-    delay(20);  
+    delay(50);  
   } else {
     Serial.println("FFT not available.");
   }
