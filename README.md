@@ -1,19 +1,20 @@
-# LCD Audio_Visualizer
-Currently in progress. I created this project to explore audio visualization on the teensy4.1 MCU, taking in audio from a microphone over I2S and using fast-fourier transforms to display audio over SPI to an LCD screen. 
+LCD Audio Visualizer
 
-# Components
-- Teensy4.1
-- SGTL5000 audio codec chip
-- ILI9341_t3 LCD screen
+An ongoing project to explore audio visualization on the Teensy 4.1 MCU. This setup takes in audio from a microphone via I2S, processes it with FFT, and displays it on an LCD screen over SPI.
 
-# Building and Flashing
-- The project was built using platform.io for VScode using the arduino framework and flashed using Teensy Loader via the platform.io inbuilt tool
+Components
+- **Teensy 4.1**
+- **SGTL5000** audio codec
+- **ILI9341_t3** LCD
 
-# Progress (9/3/24): Basic LCD audio visualization functioning correctly
-- Video folder: https://drive.google.com/drive/folders/1r5S8tVGhgMvAbBuU4rN-VzRu5Oz8auLu?usp=sharing
+Building & Flashing
+- Built using PlatformIO (Arduino framework) for VS Code.
+- Flashing is handled via Teensy Loader using PlatformIO's integrated tool.
 
-# External Documentation
-- https://protosupplies.com/product/prototyping-system-for-teensy-4-1/
-- https://protosupplies.com/learn/audio-tutorials-and-workshop/
+Progress (as of 9/3/24)
+- Basic LCD audio visualization is functional.
+- Project video: https://drive.google.com/drive/folders/1r5S8tVGhgMvAbBuU4rN-VzRu5Oz8auLu?usp=sharing
 
-
+References
+- Prototyping System for Teensy 4.1: https://protosupplies.com/product/prototyping-system-for-teensy-4-1/
+- Audio Tutorials and Workshop: https://protosupplies.com/learn/audio-tutorials-and-workshop/
